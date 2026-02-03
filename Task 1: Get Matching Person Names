@@ -1,1 +1,31 @@
+# Install library (agar pehle install nahi hai)
+# pip install rapidfuzz
+
+from rapidfuzz import fuzz, process
+
+# Step 1: List of names (30+ similar names)
+name_list = [
+    "Geetha", "Gita", "Geetu", "Gitu", "Sita", "Seeta", "Rita", "Reeta",
+    "Pooja", "Puja", "Priya", "Preeti", "Neha", "Nehha", "Sneha", "Snehaa",
+    "Anita", "Aneeta", "Sheetal", "Shital", "Komal", "Kamal", "Meena", "Mina",
+    "Rina", "Reena", "Tina", "Teena", "Vina", "Veena"
+]
+
+# Step 2: Take user input
+user_input = input("Enter a name: ")
+
+# Step 3: Find best match using RapidFuzz
+best_match = process.extractOne(user_input, name_list, scorer=fuzz.ratio)
+# best_match -> tuple: (name, score, index)
+
+# Step 4: Find top 5 similar names
+top_matches = process.extract(user_input, name_list, scorer=fuzz.ratio, limit=5)
+
+# Step 5: Print results
+print("\nBest Match:")
+print(f"{best_match[0]} with similarity {best_match[1]}%")
+
+print("\nTop 5 Similar Names:")
+for i, match in enumerate(top_matches, start=1):
+    print(f"{i}. {match[0]} - {match[1]}%")
 
