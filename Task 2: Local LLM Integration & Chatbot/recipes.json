@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Onion Omelette",
+        "ingredients": ["egg", "onion", "salt", "pepper"],
+        "steps": "Beat eggs, chop onions, mix with salt and pepper, fry in pan."
+    },
+    {
+        "name": "Egg Fried Rice",
+        "ingredients": ["egg", "rice", "onion", "carrot", "peas", "soy sauce"],
+        "steps": "Cook rice, scramble eggs, fry vegetables, mix everything with soy sauce."
+    },
+    {
+        "name": "Veggie Salad",
+        "ingredients": ["lettuce", "tomato", "cucumber", "carrot", "olive oil"],
+        "steps": "Chop all vegetables and mix with olive oil."
+    }
+]
